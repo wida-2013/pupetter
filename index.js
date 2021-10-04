@@ -25,6 +25,15 @@ app.get("/",async function(req, res) {
     res.send(JSON.stringify(cpune, null, 4));
 })
 
+app.get("/halo",async function(req, res) {
+	res.header("Content-Type", 'application/json');
+	res.send(JSON.stringify({
+        code: 403,
+        status: false,
+        message: "well done!"
+    }, null, 4));
+}
+
 
 app.get('/ayla', async (req, res) => {
     let q = req.query.q
